@@ -1,4 +1,4 @@
-#include "oled-driver/Image.hpp"
+#include "display-renderer/Image.hpp"
 
 //--------------------------------------------------------------------------------------------------
 Image &Image::operator=(Image &&other)

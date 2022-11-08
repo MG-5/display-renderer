@@ -1,4 +1,4 @@
-#include "oled-driver/Renderer.hpp"
+#include "display-renderer/Renderer.hpp"
 #include <algorithm>
 #include <cstring>
 
@@ -128,7 +128,6 @@ void Renderer::drawVerticalLine(size_t column, size_t pageStart, size_t pageEnd,
     fromRow = std::min(fromRow, PixelPerPage - 1);
     toRow = std::min(toRow, PixelPerPage - 1);
 
-    size_t regionIndex = (column >> 5) & 0b11;
     uint8_t pattern = 0;
 
     if (pageStart == pageEnd)
